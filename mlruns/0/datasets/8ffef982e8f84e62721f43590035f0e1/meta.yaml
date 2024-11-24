@@ -1,0 +1,13 @@
+digest: ae9c89ee
+name: dataset
+profile: '{"num_rows": 468408, "num_elements": 4215672}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "Gender", "required": true},
+  {"type": "long", "name": "Region_Code", "required": true}, {"type": "long", "name":
+  "Previously_Insured", "required": true}, {"type": "long", "name": "Vehicle_Age",
+  "required": true}, {"type": "long", "name": "Vehicle_Damage", "required": true},
+  {"type": "double", "name": "Annual_Premium", "required": true}, {"type": "double",
+  "name": "Vintage", "required": true}, {"type": "long", "name": "Age_Encoded", "required":
+  true}, {"type": "double", "name": "Policy_Sales_Channel_Encoded", "required": true}]}'
+source: '{"tags": {"mlflow.user": "root", "mlflow.source.name": "run_pipeline.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "ef4f7c3b53b7daa9c81fe8d1dcf9df11fd9332cc"}}'
+source_type: code

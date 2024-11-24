@@ -1,0 +1,30 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+mlflow_version: 2.17.1
+model_size_bytes: 2901
+model_uuid: 877abe19f13f44f6968a18b0e295e213
+run_id: c7057d67a28842f0bb0a818af86bb109
+signature:
+  inputs: '[{"type": "long", "name": "Gender", "required": true}, {"type": "long",
+    "name": "Region_Code", "required": true}, {"type": "long", "name": "Previously_Insured",
+    "required": true}, {"type": "long", "name": "Vehicle_Age", "required": true},
+    {"type": "long", "name": "Vehicle_Damage", "required": true}, {"type": "double",
+    "name": "Annual_Premium", "required": true}, {"type": "double", "name": "Vintage",
+    "required": true}, {"type": "long", "name": "Age_Encoded", "required": true},
+    {"type": "double", "name": "Policy_Sales_Channel_Encoded", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-11-13 12:10:58.948462'

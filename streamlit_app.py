@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import json
+import time
 
 # Streamlit App Title
 st.title("Health Insurance Cross-Selling Predictor")
@@ -37,6 +38,19 @@ with st.sidebar:
     
     # Submit button
     submit = st.button("Get Prediction")
+    
+def get_prediction(json_data, retries=5):
+    url = "http://127.0.0.1:8001/invocations"  # Update with the correct URL if needed
+    for _ in range(retries):
+        try:
+            response = requests.post(url, headers={"Content-Type": "application/json"}, data=json_data)
+            response.raise_for_status()  # Raise an HTTPError if the response was an error
+            return response.json()  # Return the JSON response if successful
+        except requests.exceptions.RequestException as e:
+            st.error(f"Error connecting to the model server: {e}")
+            time.sleep(2)  # Wait for 2 seconds before retrying
+    st.error("Failed to connect to the model server after several attempts.")
+    return None
 
 if submit:
     # Prepare input data in the format expected by the MLflow server
@@ -59,22 +73,13 @@ if submit:
     # Convert input data to JSON
     json_data = json.dumps(input_data)
 
-    # Define the URL of the MLflow model prediction server
-    url = "http://127.0.0.1:8000/invocations"
-
-    # Send a POST request to the model server
-    response = requests.post(url, headers={"Content-Type": "application/json"}, data=json_data)
-
-    # Check response status
-    if response.status_code == 200:
-        prediction = response.json()
+    # Get prediction from the server
+    prediction = get_prediction(json_data)
+    
+    if prediction:
         prediction_value = prediction['predictions'][0]
-
-        # Display user-friendly output message
+        # Display user-friendly output message with additional information if available
         if prediction_value == 1:
             st.success("The customer is interested in buying vehicle insurance.")
         else:
             st.success("The customer is not interested in buying vehicle insurance.")
-    else:
-        st.error(f"Error: {response.status_code}")
-        st.error(response.text) 

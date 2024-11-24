@@ -1,0 +1,15 @@
+artifact_uri: file:///home/karthikponna/kittu/Health%20Insurance%20Cross%20Sell%20Prediction%20Mlops%20Project/Health-Insurance-Cross-Sell-Prediction-Mlops/mlruns/0/aded93370a4b475c8f2df4a692a52ef7/artifacts
+end_time: 1731504442988
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: aded93370a4b475c8f2df4a692a52ef7
+run_name: unequaled-whale-384
+run_uuid: aded93370a4b475c8f2df4a692a52ef7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731504301128
+status: 3
+tags: []
+user_id: root

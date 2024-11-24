@@ -1,0 +1,9 @@
+[('preprocessor', ColumnTransformer(transformers=[('num',
+                                 Pipeline(steps=[('imputer', SimpleImputer()),
+                                                 ('scaler', StandardScaler())]),
+                                 ['Annual_Premium', 'Vintage']),
+                                ('cat', SimpleImputer(strategy='most_frequent'),
+                                 ['Gender', 'Region_Code', 'Age_Encoded',
+                                  'Vehicle_Age', 'Policy_Sales_Channel_Encoded',
+                                  'Previously_Insured', 'Vehicle_Damage'])])), ('model', LogisticRegression(C=1, l1_ratio=0.5, max_iter=2000, penalty='elasticnet',
+                   random_state=42, solver='saga'))]

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/karthikponna/kittu/Health%20Insurance%20Cross%20Sell%20Prediction%20Mlops%20Project/Health-Insurance-Cross-Sell-Prediction-Mlops/mlruns/0/75a4dd6948ec4853a119b0dd4d7df8ee/artifacts
+end_time: 1731503691085
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 75a4dd6948ec4853a119b0dd4d7df8ee
+run_name: vaunted-snipe-232
+run_uuid: 75a4dd6948ec4853a119b0dd4d7df8ee
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731503449162
+status: 3
+tags: []
+user_id: root
