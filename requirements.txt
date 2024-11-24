@@ -11,4 +11,4 @@ zenml==0.67.0
 imblearn==0.0
 xgboost==2.1.2
 lightgbm==4.5.0
-streamlit
+streamlit==1.40.1

@@ -1,9 +1,7 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from abc import ABC, abstractmethod
-import plotly.express as px 
-import plotly.graph_objects as go
+from abc import ABC, abstractmethod 
 
 # Abstract Base Class for Univariate Analysis Strategy
 # -----------------------------------------------------
