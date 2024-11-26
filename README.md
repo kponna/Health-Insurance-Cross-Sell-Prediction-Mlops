@@ -3,11 +3,11 @@
 ![assets/Project Architecture MLops.gif](assets/project_architecture_mLops.gif) 
 ## Project Overview 📋
 
-Welcome to the Home Insurance Cross-Selling Prediction Project! 🏡🚗 This project is designed to identify customers holding home insurance who are likely to purchase additional vehicle insurance. By utilizing advanced machine learning techniques and integrating cutting-edge tools like MLflow, ZenML, and Streamlit, the project delivers a powerful and scalable solution for driving targeted marketing strategies and maximizing business impact.
+Welcome to the Home Insurance Cross-Selling Prediction Project! This project is designed to identify customers holding home insurance who are likely to purchase additional vehicle insurance. By utilizing advanced machine learning techniques and integrating cutting-edge tools like MLflow, ZenML, and Streamlit, the project delivers a powerful and scalable solution for driving targeted marketing strategies and maximizing business impact.
 
 We've crafted this project to seamlessly guide you through every step of the workflow—from data ingestion and cleaning to model training, deployment, and inference. With a focus on recall and scalability, the pipelines include robust quality checks, performance tracking, and automated deployment mechanisms.
 
-This project empowers you with actionable insights and predictions, enabling businesses to optimize marketing efforts, enhance customer engagement, and boost revenue growth! 📊✨
+This project empowers you with actionable insights and predictions, enabling businesses to optimize marketing efforts, enhance customer engagement, and boost revenue growth! 📊
 
 ## Objective 🎯
 
