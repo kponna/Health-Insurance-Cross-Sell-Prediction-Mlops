@@ -1,13 +1,11 @@
-import logging
-import pandas as pd
+import pandas as pd  
 from src.feature_engineering import (
     FeatureEngineer, LogTransformation, MinMaxScaling, 
-    DropUnnecessaryColumns, FrequencyEncoding, OrdinalEncoding, MapEncoding,StandardScaler
+    DropUnnecessaryColumns, FrequencyEncoding, OrdinalEncoding, MapEncoding
 )
-from zenml import step
-
-@step
-def feature_engineering_step(df: pd.DataFrame, strategies: list ) -> pd.DataFrame:
+import logging
+import joblib
+def preprocessing(df: pd.DataFrame, strategies: list ) -> pd.DataFrame:
     """Applies a sequence of feature engineering steps based on selected strategies and saves the engineered data. 
 
     Parameters:
@@ -17,6 +15,8 @@ def feature_engineering_step(df: pd.DataFrame, strategies: list ) -> pd.DataFram
     Returns:
         pd.DataFrame: A dataframe with the applied transformations.
         """ 
+    scaler_path = "/home/karthikponna/kittu/Health Insurance Cross Sell Prediction Mlops Project/Health-Insurance-Cross-Sell-Prediction-Mlops/data/artifacts/models/standard_scaler.pkl"  # Update with the actual path
+    pretrained_scaler = joblib.load(scaler_path)
     try:
         df_transformed = df.copy()
 
@@ -29,10 +29,9 @@ def feature_engineering_step(df: pd.DataFrame, strategies: list ) -> pd.DataFram
             minmax_transformer = FeatureEngineer(MinMaxScaling(features=['Annual_Premium']))
             df_transformed = minmax_transformer.apply_feature_engineering(df_transformed)
 
-        if 'scaler' in strategies:
-            scaler_transformer = FeatureEngineer(StandardScaler(features=['Vintage']))
-            df_transformed = scaler_transformer.apply_feature_engineering(df_transformed)
-
+        if 'scaler' in strategies: 
+            scaled_features = ['Vintage', 'Annual_Premium']
+            df_transformed[scaled_features] = pretrained_scaler.transform(df_transformed[scaled_features])
         if 'ordinal' in strategies:
             ordinal_encoder = FeatureEngineer(OrdinalEncoding(age_feature='Age' ))
             df_transformed = ordinal_encoder.apply_feature_engineering(df_transformed)
@@ -62,3 +61,9 @@ def feature_engineering_step(df: pd.DataFrame, strategies: list ) -> pd.DataFram
     except Exception as e:
         logging.error(f"Error during feature engineering: {e}")
         raise e
+    
+def preprocess_data(input_data: pd.DataFrame):
+    """Preprocess the input data through all pipeline steps."""
+     
+    processed_df = preprocessing(input_data, strategies=['scaler', 'ordinal', 'map','freq']) 
+    return processed_df

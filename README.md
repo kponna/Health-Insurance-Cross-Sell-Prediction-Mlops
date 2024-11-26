@@ -1,4 +1,4 @@
-# 🏡 Home Insurance Cross-Selling Prediction - MLops Project 
+# Health Insurance Cross-Selling Prediction - MLops Project 
 
 ![assets/Project Architecture MLops.gif](assets/project_architecture_mLops.gif) 
 ## Project Overview 📋
@@ -139,7 +139,7 @@ zenml integration install mlflow -y
 ```
 
 3. Register mlflow in the stack:
-```bash  
+```bash   
 zenml experiment-tracker register mlflow_tracker --flavor=mlflow
 zenml model-deployer register mlflow --flavor=mlflow
 zenml stack register local-mlflow-stack -a default -o default -d mlflow -e mlflow_tracker --set

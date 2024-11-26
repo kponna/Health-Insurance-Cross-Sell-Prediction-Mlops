@@ -2,7 +2,7 @@ import json
 import requests
 
 # URL of the MLflow prediction server
-url = "http://127.0.0.1:8000/invocations"
+url = "http://127.0.0.1:8001/invocations"
  
 # Sample input data for prediction 
 input_data = {
