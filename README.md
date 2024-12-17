@@ -1,6 +1,9 @@
 # Health Insurance Cross-Selling Prediction - MLops Project 
 
 ![assets/Project Architecture MLops.gif](assets/project_architecture_mLops.gif) 
+
+▶️YouTube 👉 [Explaination of the project](https://youtu.be/WOqLRJVPoEo?si=VPIYHEoKxoLsEuZZ)
+
 ## Project Overview 📋
 
 Welcome to the Home Insurance Cross-Selling Prediction Project! This project is designed to identify customers holding home insurance who are likely to purchase additional vehicle insurance. By utilizing advanced machine learning techniques and integrating cutting-edge tools like MLflow, ZenML, and Streamlit, the project delivers a powerful and scalable solution for driving targeted marketing strategies and maximizing business impact.
