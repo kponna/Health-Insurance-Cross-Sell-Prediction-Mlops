@@ -185,6 +185,6 @@ For any questions, suggestions, or collaboration opportunities, feel free to rea
 
 📧Email: ponnakrishnaveni76@gmail.com 
 
-🌐 LinkedIn: [Krishnaveni Ponna](www.linkedin.com/in/krishnaveni-ponna-28ab93239)
+🌐 LinkedIn: [Krishnaveni Ponna](https://www.linkedin.com/in/krishnaveni-ponna-28ab93239)
 
 🐦 Twitter: [@Krishnaveni076](https://x.com/Krishnaveni076)
